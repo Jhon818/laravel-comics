@@ -12,9 +12,16 @@
 
     <main>
  {{-- segnaposto   --}}
-      @yield('content')
+      @yield('content1')
     </main>
  
+    <div>
+        @yield('content2')
+    </div>
+
+    <div>
+        @yield('content3')
+    </div>
     @include('partials.footer')
 </body>
 </html>

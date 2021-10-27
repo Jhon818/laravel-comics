@@ -18,9 +18,17 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::get('/contacts', function () {
-    return view('contacts');
+    $array_comics = config('comics');
+    $data = [
+      'comics'  => $array_comics
+    ];
+    return view('contacts', $data);
 })->name('contacts');
 
 Route::get('/about', function () {
-    return view('about');
+    $array_comics = config('comics');
+    $data = [
+      'comics'  => $array_comics
+    ];
+    return view('about' ,$data);
 })->name('about');
